@@ -20,9 +20,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import cafe.adriel.voyager.core.screen.Screen
-import cafe.adriel.voyager.navigator.LocalNavigator
-import cafe.adriel.voyager.navigator.currentOrThrow
 
 import counterapp.composeapp.generated.resources.Res
 import counterapp.composeapp.generated.resources.compose_multiplatform
@@ -35,10 +32,3 @@ fun App() {
     }
 }
 
-class GameScreen : Screen{
-    @Composable
-    override fun Content() {
-        val navigator = LocalNavigator.currentOrThrow;
-       GameView()
-    }
-}

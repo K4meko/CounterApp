@@ -16,7 +16,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -27,33 +27,14 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     sourceSets {
-        
+
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
         }
         commonMain.dependencies {
-            val voyagerVersion = "1.1.0-beta02"
-
-            // Multiplatform
-
-            // Navigator
-            implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
-
-            // Screen Model
-            implementation("cafe.adriel.voyager:voyager-screenmodel:$voyagerVersion")
-
-            // BottomSheetNavigator
-            implementation("cafe.adriel.voyager:voyager-bottom-sheet-navigator:$voyagerVersion")
-
-            // TabNavigator
-            implementation("cafe.adriel.voyager:voyager-tab-navigator:$voyagerVersion")
-
-            // Transitions
-            implementation("cafe.adriel.voyager:voyager-transitions:$voyagerVersion")
-
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
@@ -65,7 +46,6 @@ kotlin {
 }
 
 android {
-
     namespace = "counter.k4meko"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
@@ -99,12 +79,6 @@ android {
     }
     dependencies {
         debugImplementation(compose.uiTooling)
-        implementation("androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha07")
-
     }
-}
-dependencies {
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha07")
-    implementation(libs.androidx.lifecycle.viewmodel.android)
 }
 
