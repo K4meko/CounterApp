@@ -39,7 +39,7 @@ fun GameView() {
         horizontalAlignment = Alignment.CenterHorizontally
     ){
         Box(
-            modifier = Modifier.fillMaxWidth() // Make boxes fill the width
+            modifier = Modifier.fillMaxWidth() 
                 .height(50.dp)
                 .clip(RoundedCornerShape(16.dp))
                 .background(Color.Blue)
@@ -66,7 +66,7 @@ fun GameView() {
 
         Box(
             modifier = Modifier
-                .fillMaxWidth() // Make boxes fill the width
+                .fillMaxWidth() 
                 .height(50.dp)
                 .clip(RoundedCornerShape(16.dp))
                 .background(Color.Red)
